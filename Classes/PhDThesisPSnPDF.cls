@@ -1001,9 +1001,17 @@ wish to left align your text}
 \@degreedate{}
 \vfill
 }
-
-
-
+%*****************Publications
+\newenvironment{publications and conferences}{
+\cleardoublepage
+\setsinglecolumn
+\chapter*{\centering \Large Publications and Conferences}
+\thispagestyle{empty}
+}
+%\newenvironment{Publications}{
+%	\chapter{Publications}
+%	\addcontentsline{toc}{chapter}{Publications}\markboth{Publications}{}
+%}{\clearpage}
 % ****************************** Acknowledgements ********************************
 % The acknowledgements environment puts a large, bold, centered
 % "Acknowledgements" label at the top of the page.
