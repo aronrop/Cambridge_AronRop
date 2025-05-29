@@ -8,6 +8,8 @@
 \nomenclatureentry{s-0$0$@[{$0$}]\begingroup subscript index\nomeqref {1.1}|nompageref}{1}
 \nomenclatureentry{z-nipaNIPA@[{NIPA}]\begingroup N-isopropylacrylamide\nomeqref {1.1}|nompageref}{1}
 \nomenclatureentry{z-namNAM@[{NAM}]\begingroup N-acryloylmorpholine\nomeqref {1.1}|nompageref}{1}
+\nomenclatureentry{g-a$\alpha$@[{$\alpha$}]\begingroup Specific rotation\nomeqref {1.1}|nompageref}{1}
+\nomenclatureentry{g-mu$\mu$@[{$\mu$}]\begingroup Deviation\nomeqref {1.1}|nompageref}{1}
 \nomenclatureentry{z-DEMDEM@[{DEM}]\begingroup Discrete Element Method\nomeqref {1.1}|nompageref}{4}
 \nomenclatureentry{z-FEMFEM@[{FEM}]\begingroup Finite Element Method\nomeqref {1.1}|nompageref}{4}
 \nomenclatureentry{z-PFEMPFEM@[{PFEM}]\begingroup Particle Finite Element Method\nomeqref {1.1}|nompageref}{4}
