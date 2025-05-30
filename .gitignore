@@ -17,6 +17,8 @@
 *.vscode
 *.synctex.gz
 *.lof
+*.nlo
+*.nls
 
 # Other temp files
 *.swp
