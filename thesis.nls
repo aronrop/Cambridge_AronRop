@@ -3,8 +3,10 @@
 \nomgroup{A}
   \item [{$F$}]\begingroup complex function\nomeqref {1.1}\nompageref{1}
 \nomgroup{G}
+  \item [{$\alpha$}]\begingroup Specific rotation\nomeqref {1.1}\nompageref{1}
   \item [{$\gamma$}]\begingroup a simply closed curve on a complex plane\nomeqref {1.1}\nompageref{1}
   \item [{$\iota$}]\begingroup unit imaginary number $\sqrt{-1}$\nomeqref {1.1}\nompageref{1}
+  \item [{$\mu$}]\begingroup Deviation\nomeqref {1.1}\nompageref{1}
   \item [{$\pi$}]\begingroup  $\simeq 3.14\ldots$\nomeqref {1.1}\nompageref{1}
 \nomgroup{R}
   \item [{$j$}]\begingroup superscript index\nomeqref {1.1}\nompageref{1}
