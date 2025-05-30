@@ -14,7 +14,7 @@
 \section{First section of the third chapter}
 And now I begin my third chapter here \dots
 
-And now to cite some more people~\citet{Rea85,Ancey1996}
+And now to cite some more people~\cite{Rea85,Ancey1996}
 
 \subsection{First subsection in the first section}
 \dots and some more 
@@ -154,3 +154,95 @@ CBL & 11.88 & 0.05 & 13.11 & 0.04\\
 \bottomrule
 \end{tabular}
 \end{table}
+\subsection{ctable}
+You can use ctable package to create highly customizable tables. Check documentation for further explanation
+\ctable[
+cap = The Skewing Angles,
+caption = The Skewing Angles ($\beta$) for
+$\fam0 Mu(H)+X_2$ and $\fam0 Mu(H)+HX$~\tmark,
+label = nowidth,
+pos = h
+]{rlcc}{
+	\tnote{for the abstraction reaction,
+		$\fam0 Mu+HX \rightarrow MuH+X$.}
+	\tnote[b]{1 degree${} = \pi/180$ radians.}
+	\tnote[c]{this is a particularly long note, showing that
+		footnotes are set in raggedright mode as we don't like
+		hyphenation in table footnotes.}
+}{ \FL
+	& & $\fam0 H(Mu)+F_2$ & $\fam0 H(Mu)+Cl_2$ \ML
+	&$\beta$(H) & $80.9^\circ$\tmark[b] & $83.2^\circ$ \NN
+	&$\beta$(Mu) & $86.7^\circ$ & $87.7^\circ$ \LL
+}
+
+
+\subsection{lenghty table that cover whole width}
+In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. confirm if footnotes are getting printed and find a fix if not.
+\begin{table}[h]
+	\renewcommand{\thefootnote}{\alph{footnote}} % Force alphabetic footnotes
+	\caption{Example of a lengthy table which is set to full textwidth}\label{tab2}
+	\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccccc}
+		\toprule%
+		& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
+		Project & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
+		\midrule
+		Element 3  & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$\\
+		Element 4  & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$\\
+		\bottomrule
+		
+	
+	\end{tabular*}
+	\footnotetext{Note: Footnote for lengthy table.}	
+	\footnotetext[1]{Example for a first table footnote.}
+	\footnotetext[2]{Example for a second table footnote.}
+\end{table}
+
+
+\subsection{sideways table}
+You can use sideways environment to create sideways table to carry more data in a single page. 
+\begin{sidewaystable}
+	\renewcommand{\thefootnote}{\alph{footnote}}%to force alpahbet tmark
+	\caption{Tables which are too long to fit, should be written using the ``sidewaystable'' environment as shown here}\label{tab3}
+	\begin{tabular*}{\textheight}{@{\extracolsep\fill}lcccccc}
+		\toprule%
+		& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]}& \multicolumn{3}{@{}c@{}}{Element\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
+		Projectile & Energy	& $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
+		\midrule
+		Element 3 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
+		Element 4 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
+		Element 5 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
+		Element 6 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
+		\bottomrule
+	\end{tabular*}
+	\footnotetext{Note: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
+	\footnotetext[1]{This is an example of table footnote.}
+	\footnotetext[2]{A very important table footnote}
+\end{sidewaystable}
+
+\section{Equations}\label{sec4}
+
+Equations in \LaTeX\ can either be inline or on-a-line by itself (``display equations''). For
+inline equations use the \verb+$...$+ commands. E.g.: The equation
+$H\psi = E \psi$ is written via the command \verb+$H \psi = E \psi$+.
+
+For display equations (with auto generated equation numbers)
+one can use the equation or align environments:
+\begin{equation}
+	\|\tilde{X}(k)\|^2 \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.\label{eq1}
+\end{equation}
+where,
+\begin{align}
+	D_\mu &=  \partial_\mu - ig \frac{\lambda^a}{2} A^a_\mu \nonumber \\
+	F^a_{\mu\nu} &= \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^a_\nu \label{eq2}
+\end{align}
+Notice the use of \verb+\nonumber+ in the align environment at the end
+of each line, except the last, so as not to produce equation numbers on
+lines where no equation numbers are required. The \verb+\label{}+ command
+should only be used at the last line of an align environment where
+\verb+\nonumber+ is not used.
+\begin{equation}
+	Y_\infty = \left( \frac{m}{\textrm{GeV}} \right)^{-3}
+	\left[ 1 + \frac{3 \ln(m/\textrm{GeV})}{15}
+	+ \frac{\ln(c_2/5)}{15} \right]
+\end{equation}
+
