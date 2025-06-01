@@ -155,7 +155,8 @@ CBL & 11.88 & 0.05 & 13.11 & 0.04\\
 \end{tabular}
 \end{table}
 \subsection{ctable}
-You can use ctable package to create highly customizable tables. Check documentation for further explanation
+You can use ctable package to create highly customizable tables. Check documentation for further explanation and see~\cref{nowidth} 
+
 \ctable[
 cap = The Skewing Angles,
 caption = The Skewing Angles ($\beta$) for
@@ -176,70 +177,30 @@ pos = h
 }
 
 
+
 \subsection{lenghty table that cover whole width}
-In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. confirm if footnotes are getting printed and find a fix if not.
-
-
+In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. confirm if footnotes are getting printed and find a fix if not or convert to ctable
 \begin{table}[h]
-		\begin{threeparttable}
-	
-	
 	\caption{Example of a lengthy table which is set to full textwidth}\label{tab2}
 	\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccccc}
 		\toprule%
-		& \multicolumn{3}{@{}c@{}}{Element 1\tnote{1}} & \multicolumn{3}{@{}c@{}}{Element 2\tnote{2}} \\\cmidrule{2-4}\cmidrule{5-7}%
+		& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
 		Project & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
 		\midrule
 		Element 3  & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$\\
 		Element 4  & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$\\
 		\bottomrule
 	\end{tabular*}
-	\begin{tablenotes}
-	\item[1] First Element is Lithium
-	\item[2] Second Element is Sodium
-\end{tablenotes}
-	
-		\end{threeparttable}
+	\footnotetext{Note: This is an example of table footnote. This is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
+	\footnotetext[1]{Example for a first table footnote.}
+	\footnotetext[2]{Example for a second table footnote.}
 \end{table}
 
 
 
-	
-	\begin{table}[h]
-		\centering
-		\begin{threeparttable}
-			\caption{Common Tables}\label{tab:common}
-			\begin{tabular}{@{}llll@{}}
-				\toprule
-				Column 1 & Column 2 & Column 3 & Column 4 \\
-				\midrule
-				row 1 & data 1 & data 2 & data 3 \\
-				row 2 & data 4 & data 5\tnote{1} & data 6 \\
-				row 3 & data 7 & data 8 & data 9\tnote{2} \\
-				\bottomrule
-			\end{tabular}
-			\begin{tablenotes}
-				\item[1] Example for a first table footnote.
-				\item[2] Example for a second table footnote.
-			\end{tablenotes}
-		\end{threeparttable}
-	\end{table}
-%\begin{table}[h]
-%	\centering
-%	\caption{Caption text}\label{tab1}%
-%	\begin{tabular}{@{}llll@{}}
-%		\toprule
-%		Column 1 & Column 2  & Column 3 & Column 4\\
-%		\midrule
-%		row 1    & data 1   & data 2  & data 3  \\
-%		row 2    & data 4   & data 5\footnotemark[1]  & data 6  \\
-%		row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
-%		\bottomrule
-%	\end{tabular}
-%	\footnotetext{Source: This is an example of table footnote. This is an example of table footnote.}
-%	\footnotetext[1]{Example for a first table footnote. This is an example of table footnote.}
-%	\footnotetext[2]{Example for a second table footnote. This is an example of table footnote.}
-%\end{table}	
+
+
+
 
 
 

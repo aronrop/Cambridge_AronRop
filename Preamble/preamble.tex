@@ -14,8 +14,8 @@
 % Ragged bottom avoids extra whitespaces between paragraphs
 \raggedbottom
 % To remove the excess top spacing for enumeration, list and description
-%\usepackage{enumitem}
-%\setlist[enumerate,itemize,description]{topsep=0em}
+\usepackage{enumitem}
+\setlist[enumerate,itemize,description]{topsep=0em}
 
 % *****************************************************************************
 % ******************* Fonts (like different typewriter fonts etc.)*************
@@ -84,8 +84,8 @@
 \usepackage{tabularx}
 \usepackage{ctable}
 \usepackage{tablefootnote}
-\usepackage{manyfoot,threeparttable}% to help with footnotes
-%\usepackage{pdflscape} dont load, for rendering landscape
+%\usepackage{manyfoot,threeparttable}% to help with footnotes% Dont load. It conflicts ctable.
+%\usepackage{pdflscape} %dont load, for rendering landscape
 %other packages goes here
 \usepackage{lineno,setspace}
 \usepackage{hyperref}
@@ -214,5 +214,51 @@
 
 % Example todo: \mynote{Hey! I have a note}
 
-
+%%%%%%%Decrease spacing In first page of chapter%%%%from Github
+\makeatletter
+\def\@makechapterhead#1{%
+	\vspace*{50\p@}
+	{\parindent \z@ \raggedright \normalfont
+		\ifnum \c@secnumdepth >\m@ne
+		\huge\bfseries \@chapapp\space \thechapter
+		\par\nobreak
+		\vskip 20\p@
+		\fi
+		\interlinepenalty\@M
+		\Huge \bfseries #1\par\nobreak
+		\vskip 10\p@
+}}
+\def\@makeschapterhead#1{
+	\vspace*{50\p@}
+	{\parindent \z@ \raggedright
+		\normalfont
+		\interlinepenalty\@M
+		\Huge \bfseries  #1\par\nobreak
+		\vskip 10\p@
+}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@makechapterhead#1{%
+	%%%%\vspace*{50\p@}% %%% removed!
+	{\parindent \z@ \raggedright \normalfont
+		\ifnum \c@secnumdepth >\m@ne
+		\huge\bfseries \@chapapp\space \thechapter
+		\par\nobreak
+		\vskip 20\p@
+		\fi
+		\interlinepenalty\@M
+		\Huge \bfseries #1\par\nobreak
+		\vskip 40\p@
+}}
+\def\@makeschapterhead#1{%
+	%%%%%\vspace*{50\p@}% %%% removed!
+	{\parindent \z@ \raggedright
+		\normalfont
+		\interlinepenalty\@M
+		\Huge \bfseries  #1\par\nobreak
+		\vskip 40\p@
+}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%
 
