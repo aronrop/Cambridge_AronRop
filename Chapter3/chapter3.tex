@@ -82,7 +82,7 @@ A frequently seen mistake is to use `\textbackslash begin\{center\}' \dots `\tex
 \begin{table}
 \caption{A badly formatted table}
 \centering
-\label{table:bad_table}
+%\label{table:bad_table}
 \begin{tabular}{|l|c|c|c|c|}
 \hline 
 & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c|}{Species II} \\ 
@@ -107,7 +107,7 @@ CBL & 11.88 & 0.05 & 13.11 & 0.04\\
 \begin{table}
 \caption{A nice looking table}
 \centering
-\label{table:nice_table}
+%\label{table:nice_table}
 \begin{tabular}{l c c c c}
 \hline 
 \multirow{2}{*}{Dental measurement} & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c}{Species II} \\ 
@@ -133,7 +133,7 @@ CBL & 11.88 & 0.05 & 13.11 & 0.04\\
 \begin{table}
 \caption{Even better looking table using booktabs}
 \centering
-\label{table:good_table}
+%\label{table:good_table}
 \begin{tabular}{l c c c c}
 \toprule
 \multirow{2}{*}{Dental measurement} & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c}{Species II} \\ 
@@ -181,7 +181,7 @@ pos = h
 \subsection{lenghty table that cover whole width}
 In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. confirm if footnotes are getting printed and find a fix if not or convert to ctable
 \begin{table}[h]
-	\caption{Example of a lengthy table which is set to full textwidth}\label{tab2}
+	\caption{Example of a lengthy table which is set to full textwidth}%\label{tab2}
 	\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccccc}
 		\toprule%
 		& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
