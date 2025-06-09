@@ -6,13 +6,13 @@
 % other page dimensions
 \ifsetCustomMargin
   \RequirePackage[left=37mm,right=30mm,top=35mm,bottom=30mm]{geometry}
- \setFancyHdr % To apply fancy header after geometry package is loaded
+  \setFancyHdr % To apply fancy header after geometry package is loaded
 \fi
 
 % Add spaces between paragraphs
-\setlength{\parskip}{0.5em}
+%\setlength{\parskip}{0.5em}
 % Ragged bottom avoids extra whitespaces between paragraphs
-%\raggedbottom
+\raggedbottom
 % To remove the excess top spacing for enumeration, list and description
 \usepackage{enumitem}
 \setlist[enumerate,itemize,description]{topsep=0em}
@@ -52,8 +52,7 @@
 % ********************Captions and Hyperreferencing / URL **********************
 
 % Captions: This makes captions of figures use a boldfaced small font.
-\RequirePackage[small,bf]{caption}
-%\usepackage[labelfont=sc]{caption}%labels caption with small caps
+%\RequirePackage[small,bf]{caption}
 
 \RequirePackage[labelsep=space,tableposition=top]{caption}
 \renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
@@ -75,7 +74,6 @@
 %\usepackage{sty/caption/subcaption}
 \usepackage{subcaption}
 
-
 % ********************************** Tables ************************************
 \usepackage{booktabs} % For professional looking tables
 \usepackage{multirow}
@@ -84,13 +82,14 @@
 \usepackage{multicol}
 \usepackage{longtable}
 \usepackage{tabularx}
+\usepackage{ctable}
 \usepackage{tablefootnote}
 %\usepackage{manyfoot,threeparttable}% to help with footnotes% Dont load. It conflicts ctable.
 %\usepackage{pdflscape} %dont load, for rendering landscape
 %other packages goes here
-%\usepackage{helvet}
 \usepackage{lineno,setspace}
 \usepackage{hyperref}
+<<<<<<< HEAD
 %\hypersetup{
 %	colorlinks=true,
 %	linkcolor=black,
@@ -100,6 +99,9 @@
 %}%makes the hyperref in the document black
 %\frenchspacing % removes the outdated additional space after a full stop
 \usepackage[section]{placeins}% to prevents floats from spilling to next section
+=======
+\hypersetup{colorlinks=true,allbordercolors=}
+>>>>>>> parent of fa1b3f0 (formatting)
 \usepackage{upgreek}
 \usepackage{array,multirow,layouts}
 \usepackage{epstopdf}
@@ -114,11 +116,6 @@
 \usepackage{chemnum}
 % for degrees c symbol
 \newcommand{\degc}{$^\circ$C}
-% for registered trademarks
-\newcommand{\regtm}{$\textsuperscript{\textregistered}$}
-% don't allow footnotes to span multiple pages
-\interfootnotelinepenalty=10000
-
 %\DeclareUnicodeCharacter{2212}{\ensuremath{-}}%uncomment this if you have problems with unicode 2212 (minus sign)
 
 %*****************************************
@@ -133,7 +130,7 @@
 
 % \doublespacing
 % \onehalfspacing
-%\singlespacing
+% \singlespacing
 
 
 % ************************ Formatting / Footnote *******************************
@@ -221,7 +218,7 @@
 
 %\ifsetDraft
 %	\usepackage[colorinlistoftodos]{todonotes}
-%	\newcommand{\mynote}[1]{\todo[author=NT,size=\small,inline,color=green!40]{#1}}
+%	\newcommand{\mynote}[1]{\todo[author=kks32,size=\small,inline,color=green!40]{#1}}
 %\else
 %	\newcommand{\mynote}[1]{}
 %	\newcommand{\listoftodos}{}
@@ -276,4 +273,4 @@
 }}
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{ctable}% should be loaded after tikz. Gives propblems if loaded earlier
+
