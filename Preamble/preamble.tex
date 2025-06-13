@@ -60,15 +60,14 @@
 
 % *************************** Graphics and figures *****************************
 
-\usepackage{rotating}
-\usepackage{wrapfig}
+%\usepackage{rotating}
+%\usepackage{wrapfig}
 \usepackage[section]{placeins}%sticks floats to sections. 
 
 % Uncomment the following two lines to force Latex to place the figure.
 % Use [H] when including graphics. Note 'H' instead of 'h'
-\usepackage{float}
-\restylefloat{figure}
-
+%\usepackage{float}
+%\restylefloat{figure}
 % Subcaption package is also available in the sty folder you can use that by
 % uncommenting the following line
 % This is for people stuck with older versions of texlive
@@ -78,18 +77,17 @@
 % ********************************** Tables ************************************
 \usepackage{booktabs} % For professional looking tables
 \usepackage{multirow}
-\usepackage{nomencl}
-\makenomenclature
+
 \usepackage{multicol}
 \usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{ctable}
 \usepackage{tablefootnote}
 %\usepackage{manyfoot,threeparttable}% to help with footnotes% Dont load. It conflicts ctable.
-%\usepackage{pdflscape} %dont load, for rendering landscape
+%\usepackage{pdflscape} % for rendering landscape in pdf% comment out for normal view
 %other packages goes here
 \usepackage{lineno,setspace}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 
 %\hypersetup{
 %	colorlinks=true,
@@ -98,7 +96,7 @@
 %	urlcolor=black,
 %	citecolor=black,
 %}%makes the hyperref in the document black
-%\frenchspacing % removes the outdated additional space after a full stop
+\frenchspacing % removes the outdated additional space after a full stop
 \usepackage[section]{placeins}% to prevents floats from spilling to next section
 \usepackage{upgreek}
 \usepackage{array,multirow,layouts}
@@ -111,12 +109,13 @@
 %%in the paragraph text into compounds in ascending order
 %\usepackage{chemstyle} error here.dont load
 \usepackage{chemscheme}%used to convert the TMPXXX labels in figures and schemes into corresponding compound labels
-\usepackage{chemnum}
-% for degrees c symbol
-\newcommand{\degc}{$^\circ$C}
+\usepackage{chemnum}%for overlying numbers on chemical symbols. Superior to bpchem
+% ******************************* user-defined commands *********************************
+\newcommand{\degc}{$^\circ$C}% for degrees c symbol
+\newcommand{\regtm}{$\textsuperscript{\textregistered}$}% for registered trademarks
 %\DeclareUnicodeCharacter{2212}{\ensuremath{-}}%uncomment this if you have problems with unicode 2212 (minus sign)
 
-%*****************************************
+
 % *********************************** SI Units *********************************
 \usepackage{siunitx} % use this package module for SI units
 
@@ -143,7 +142,7 @@
 % *****************************************************************************
 % *************************** Bibliography  and References ********************
 
-\usepackage{cleveref} %Referencing without need to explicitly state fig /table
+
 
 % Add `custombib' in the document class option to use this section
 \ifuseCustomBib
