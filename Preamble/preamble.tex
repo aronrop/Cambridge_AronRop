@@ -52,7 +52,7 @@
 % ********************Captions and Hyperreferencing / URL **********************
 
 % Captions: This makes captions of figures use a boldfaced small font.
-%\RequirePackage[small,bf]{caption}
+\RequirePackage[small,bf]{caption}
 
 \RequirePackage[labelsep=space,tableposition=top]{caption}
 \renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
@@ -60,12 +60,13 @@
 
 % *************************** Graphics and figures *****************************
 
-%\usepackage{rotating}
-%\usepackage{wrapfig}
-\usepackage[section]{placeins}%sticks floats to sections. 
+\usepackage{rotating}
+\usepackage{wrapfig}
+ 
 
 % Uncomment the following two lines to force Latex to place the figure.
-% Use [H] when including graphics. Note 'H' instead of 'h'
+% Use [H] when including graphics. Note 'H' instead of 'h', this affect caption pos in tables,
+%to put table caption on top, uncomment below. Will disable table footnotes though.
 %\usepackage{float}
 %\restylefloat{figure}
 % Subcaption package is also available in the sty folder you can use that by
@@ -82,11 +83,12 @@
 \usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{ctable}
-\usepackage{tablefootnote}
+%\usepackage{tablefootnote}
 %\usepackage{manyfoot,threeparttable}% to help with footnotes% Dont load. It conflicts ctable.
 %\usepackage{pdflscape} % for rendering landscape in pdf% comment out for normal view
+
 %other packages goes here
-\usepackage{lineno,setspace}
+
 %\usepackage{hyperref}
 
 %\hypersetup{
@@ -99,8 +101,7 @@
 \frenchspacing % removes the outdated additional space after a full stop
 \usepackage[section]{placeins}% to prevents floats from spilling to next section
 \usepackage{upgreek}
-\usepackage{array,multirow,layouts}
-\usepackage{epstopdf}
+\usepackage{array,layouts}
 \usepackage[all]{hypcap}% fix hyperlinking so it goes to the top
 \usepackage[table]{xcolor}				% for coloring table rows
 %Load Chemistry themed packages here 
@@ -110,11 +111,11 @@
 %\usepackage{chemstyle} error here.dont load
 \usepackage{chemscheme}%used to convert the TMPXXX labels in figures and schemes into corresponding compound labels
 \usepackage{chemnum}%for overlying numbers on chemical symbols. Superior to bpchem
+
 % ******************************* user-defined commands *********************************
 \newcommand{\degc}{$^\circ$C}% for degrees c symbol
 \newcommand{\regtm}{$\textsuperscript{\textregistered}$}% for registered trademarks
 %\DeclareUnicodeCharacter{2212}{\ensuremath{-}}%uncomment this if you have problems with unicode 2212 (minus sign)
-
 
 % *********************************** SI Units *********************************
 \usepackage{siunitx} % use this package module for SI units
