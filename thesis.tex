@@ -2,7 +2,7 @@
 % Please have a look at the README.md file for info on how to use the template
 
 %\documentclass[a4paper,12pt,times,numbered,print,index]{Classes/PhDThesisPSnPDF}
-\documentclass[a4paper,12pt,times,numbered,index,oneside]{Classes/PhDThesisPSnPDF} %I have activated online 
+\documentclass[a4paper,12pt,times,numbered,index,oneside,]{Classes/PhDThesisPSnPDF} %I have activated online 
 % ******************************************************************************
 % ******************************* Class Options ********************************
 % *********************** See README for more details **************************
@@ -116,11 +116,13 @@
 
 \include{Dedication/dedication}
 \include{Declaration/declaration}
+\include{Opponents/Opponents}
 \include{Acknowledgement/acknowledgement}
-\include{Abstract/abstract}
-% *********************** Adding TOC and List of Figures ***********************
 
+% *********************** Adding TOC and List of Figures ***********************
+\begin{spacing}{0.9}
 \tableofcontents
+\end{spacing}
 
 \listoffigures
 
@@ -130,8 +132,9 @@
 %\printnomenclature[3em]
 
 \printnomenclature
-
+\include{Abstract/abstract}
 % ******************************** Main Matter *********************************
+\doublespacing
 \mainmatter
 
 \include{Chapter1/chapter1}

@@ -19,6 +19,7 @@
 *.lof
 *.nlo
 *.nls
+*.docx
 
 # Other temp files
 *.swp
